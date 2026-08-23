@@ -1,6 +1,7 @@
 package com.monolith.site.student;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.monolith.site.profile.Profile;
 import com.monolith.site.school.School;
 import jakarta.persistence.*;
 

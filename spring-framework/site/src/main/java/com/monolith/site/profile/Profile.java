@@ -1,5 +1,6 @@
-package com.monolith.site.student;
+package com.monolith.site.profile;
 
+import com.monolith.site.student.Student;
 import jakarta.persistence.*;
 
 @Entity
