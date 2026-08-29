@@ -1,4 +1,4 @@
-# Spring | Hibernate
+# Spring | Basics
 
 ## Table of Contents
 
@@ -176,7 +176,7 @@ spring.profiles.active=cloud
 
 ---
 
-## Annotation Reference
+## Annotation Reference (Spring Basic)
 
 | Annotation                               | Purpose                                                                                          | Notes                                                                                                                                                                                                                                    |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -401,6 +401,30 @@ com
 - It often helps to load only the parts of the configuration that are required to test a "slice" of your applicaiton
 - The spring-boot-test-autoconfiguration module includes a number of annotations that can be used to automatically configure such "slices"
 - Each slice restricts component scan to appropriate components and loads a very restricted set of auto-configuraiton class
+
+## Hibernate VS Spring Data JPA
+
+```
+Spring Data JPA <-> JPA <-> Hibernate (JDBC) <-> DB Volume
+```
+
+- Spring Data JPA is an abstraction layer on top of JPA to reduce the amount of boilerplate code required to implement data access object (DAO)
+- JPA is just a specification that facilitates Object Relational Mapping ot manage relational data in Java applications
+- Hibernate is a JPA implementation
+- Hibernate generates SQL query and executes using JDBC
+
+### Repository Abstraction
+- The Repositories abstraction is to reduce the amount of boilerplate code needed to implement the DAO (Data Access Object) to interact with the data stores
+- Spring Data JPA a repository is a Java Interface that is used to abstract the data access layer from the business logic
+- Used to perform CRUD operations (Create/Read/Update/Delete) including other operations such as Paging/Sorting
+
+## Annotation Reference (JPA)
+
+| Annotation   | Purpose             | Notes               |
+| ------------ | ------------------- | ------------------- |
+| `@Id` | Identifies the Primary Key of an Entity | |
+| `@GeneratedValue` | Specifies a Generation Strategy for generated primary keys (Auto) chooses the strategy determined to be best suited | TABLE/SEQUENCE/IDENTITY/UUID |
+
 
 ## Best Practices
 
