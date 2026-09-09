@@ -7,8 +7,6 @@ Each node closes with a **Node complete when** test. If you can't pass it, the n
 At 10–12 hours/week this is roughly 34 weeks. At 20 hours/week, roughly 18.
 
 ---
----
-
 # Milestone 1 — Foundations
 
 *Nodes 1–9. Target: 8 weeks at 10–12 hrs/week.*
@@ -19,49 +17,102 @@ The goal is depth in what you already touch daily. If your Java and Postgres are
 
 ## 1. Java core
 
-**1.1 Collections internals** — HashMap buckets, hashing, treeification at 8 entries, resize cost. ArrayList vs LinkedList real-world costs. TreeMap/LinkedHashMap ordering guarantees.
+**1.1 List implementations** — ArrayList vs LinkedList real-world costs, backing array growth, memory footprint per element, why LinkedList's O(1) insert rarely pays off.
+📺 [ArrayList vs. LinkedList — JEP Café #20](https://www.youtube.com/watch?v=ul4wHrbJ8Fk) (Benchmarks both and measures memory on screen)
+
 *Do: write a benchmark showing where LinkedList actually beats ArrayList. Note how narrow the window is.*
 
-**1.2 equals, hashCode, and comparable** — the contracts, what breaks when you violate them, why records help.
+**1.2 Map implementations** — HashMap buckets and hashing, load factor and resize cost, treeification at TREEIFY_THRESHOLD 8 with MIN_TREEIFY_CAPACITY 64, untreeify at 6. TreeMap and LinkedHashMap ordering guarantees.
+📖 Reading only — no video covers treeification properly. Read the JDK source for `HashMap.treeifyBin()` and `resize()`, plus Effective Java items 10–14.
+
+*Do: force a bucket past 8 entries with a deliberately bad hashCode. Observe the O(n) → O(log n) transition.*
+
+**1.3 equals, hashCode, and comparable** — the contracts, what breaks when you violate them, why records help.
+📺 [Optimizing your equals() methods — JEP Café #21](https://www.youtube.com/watch?v=kuzjX_efuDs)
+📺 [Records: Patterns, Performance, Serialization — JEP Café #8](https://www.youtube.com/watch?v=1oC9ESbyvqs) (benchmarks record hashCode against Kotlin data classes and Lombok)
+
 *Do: build a class that violates the hashCode contract and demonstrate the object getting lost in a HashSet.*
 
-**1.3 Streams** — laziness, short-circuiting, collectors, when a stream is slower than a loop, parallel stream pitfalls with shared state.
+**1.4 Streams** — laziness, short-circuiting, collectors, when a stream is slower than a loop, parallel stream pitfalls with shared state.
+📺 [Exploring Collectors — Venkat Subramaniam](https://www.youtube.com/watch?v=z1eaTv_FASg) ([runnable JShell companion gist](https://gist.github.com/nicokosi/d65f6a880587d085d844806368e03815))
+📺 [Deep Dive into Gatherers — JEP Café #24](https://www.youtube.com/watch?v=fgQQIV3B-uo) (internal mutable state, stream interruption, race conditions, parallel gatherers)
+📺 Optional: [Java Streams vs Reactive Streams — Venkat Subramaniam](https://www.youtube.com/watch?v=kG2SEcl1aMM) — boundary context, not core lesson material
+
 *Do: rewrite three nested loops from an old project as a stream pipeline. Then benchmark both.*
 
-**1.4 Generics and type erasure** — bounded types, wildcards, PECS, why `List<int>` is impossible, heap pollution.
+**1.5 Generics and type erasure** — bounded types, wildcards, PECS, why `List<int>` is impossible, heap pollution.
+📺 [Java Generics Finally Explained — Geekific](https://www.youtube.com/watch?v=NAZkukK5zX0) (covers wildcards and PECS; does **not** cover bridge methods or heap pollution)
+📖 Gap fill: Effective Java items 26–33 for heap pollution, `@SafeVarargs`, and bridge methods.
+
 *Do: write a generic repository interface with bounded types that compiles cleanly with no raw-type warnings.*
 
-**1.5 Modern Java** — records, sealed interfaces, pattern matching for switch, text blocks, Optional used correctly.
+**1.6 Modern Java** — records, sealed interfaces, pattern matching for switch, text blocks, Optional used correctly.
+📺 [Pattern Matching full tutorial — JEP Café #14](https://www.youtube.com/watch?v=aKaw9W789wU) (instanceof, switch, type patterns, record patterns — the mechanics)
+📺 [Data-Oriented Programming in Java 21 — JEP Café #22](https://www.youtube.com/watch?v=Y2pmZlP-cOU) (records + sealed types + exhaustive switch applied to a real problem)
+
 *Do: model a payment result as a sealed interface with record implementations and exhaustive switch handling.*
 
-**1.6 Exception design** — checked vs unchecked in practice, try-with-resources, why swallowing exceptions is the most common production bug.
+**1.7 Exception design** — checked vs unchecked in practice, try-with-resources, why swallowing exceptions is the most common production bug.
+📖 Reading only — Effective Java items 69–77. Video coverage of this topic is rules-without-examples.
+
 *Do: audit a codebase you own for empty catch blocks. Count them.*
 
-**Node complete when:** you can explain how a HashMap resizes and why a poorly distributed hashCode degrades it from O(1) to O(n) — and now O(log n) since treeification.
+---
+
+**Node complete when** you can answer both without notes:
+1. How a HashMap resizes, and why a poorly distributed hashCode degrades lookup from O(1) to O(n) — and to O(log n) once a bin treeifies.
+2. Why LinkedList's O(1) insertion rarely beats ArrayList in practice, in terms of memory layout rather than Big-O.
+
+**Playlist:** [JEP Café (full series)](https://www.youtube.com/playlist?list=PLX8CzqL3ArzV4BpOzLanxd4bZr46x5e87)
 
 ---
 
 ## 2. Java concurrency
 
-**2.1 The memory model** — happens-before, visibility vs atomicity, what `volatile` guarantees and what it doesn't.
+**2.1 The memory model** — happens-before, visibility vs atomicity, what `volatile` guarantees and what it doesn't, instruction reordering, safe publication.
+📖 Reading only — [JSR-133 (Java Memory Model) FAQ](https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html), then Java Concurrency in Practice ch. 3 and 16, then [Shipilev's JMM Pragmatics](https://shipilev.net/talks/narnia-2555-jmm-pragmatics-en.pdf) when you want the hard version.
+
 *Do: write a program with a non-volatile flag that never terminates on a server JVM. Then fix it.*
 
-**2.2 Locks** — `synchronized` vs `ReentrantLock`, fairness, read-write locks, lock striping, deadlock conditions.
+**2.2 Locks** — `synchronized` vs `ReentrantLock`, fairness, read-write locks, lock striping, the four deadlock conditions.
+📖 Reading only — JCiP ch. 10 (liveness hazards) and ch. 13 (explicit locks).
+
 *Do: deliberately construct a deadlock, then find it with a thread dump.*
 
-**2.3 Atomics and lock-free** — CAS, `AtomicInteger`, `LongAdder`, ABA problem, when lock-free wins.
+**2.3 Atomics and lock-free** — CAS, `AtomicInteger`, `LongAdder`, the ABA problem, when lock-free actually wins.
+📖 Reading only — JCiP ch. 15.
+
 *Do: build a counter three ways (synchronized, AtomicLong, LongAdder) and benchmark under contention.*
 
-**2.4 Executors and thread pools** — pool types, queue choice, rejection policies, sizing for CPU-bound vs I/O-bound work, why `Executors.newCachedThreadPool` is dangerous.
-*Do: derive a pool size for an I/O-bound service from Little's Law and defend the number in writing.*
+**2.4 Executors and thread pools** — pool types, queue choice, rejection policies, sizing for CPU-bound vs I/O-bound work, why `newCachedThreadPool` is dangerous.
+📖 Reading only — JCiP ch. 6 and 8. Ch. 8 has the pool-sizing formula your Do needs.
+*Do: derive a pool size for an I/O-bound service from Little's Law and defend the number.*
 
-**2.5 CompletableFuture** — composition, `thenCompose` vs `thenCombine`, exception handling, the executor-context trap.
+**2.5 CompletableFuture** — composition, `thenCompose` vs `thenCombine`, exception handling, the executor-context trap, why the default ForkJoinPool is a shared resource you're borrowing.
+📖 Reading only — JCiP predates this API entirely. Use the `CompletableFuture` javadoc plus Modern Java in Action ch. 16.
+
 *Do: fan out three parallel service calls, combine results, and handle partial failure without blocking.*
 
-**2.6 Virtual threads** — what they change, structured concurrency, pinning, where they don't help.
+**2.6 Virtual threads** — the new thread model, carrier threads, pinning, where they don't help.
+📺 [Java 19 Virtual Threads — JEP Café #11](https://www.youtube.com/watch?v=lKSSBvRDmTg)
+📺 [Concurrent and Asynchronous Programming: state of Loom — Paumard, Devoxx UK](https://www.youtube.com/watch?v=m0pq_wkBfPo)
+
 *Do: convert a thread-per-request handler to virtual threads and measure the difference under load.*
 
-**Node complete when:** you can explain why a shared `HashMap` under concurrent writes can produce an infinite loop, not just a lost update.
+**2.7 Structured concurrency** — `StructuredTaskScope`, scoping task lifetimes to a block, cancellation propagation, scoped values replacing ThreadLocal.
+📺 [Java Asynchronous Programming Full Tutorial with Loom and Structured Concurrency — JEP Café #13](https://www.youtube.com/watch?v=2nOj8MKHvmw) (live tutorial building a real application on virtual threads)
+
+*Do: fan out three calls under one scope. Kill one and verify the siblings cancel.*
+
+---
+
+**Node complete when** you can answer both without notes:
+1. Why a shared `HashMap` under concurrent writes can produce an infinite loop, not just a lost update.
+2. Why virtual threads don't speed up CPU-bound work, and what pinning is.
+
+**Playlist:** [JEP Café (full series)](https://www.youtube.com/playlist?list=PLX8CzqL3ArzV4BpOzLanxd4bZr46x5e87)
+
+**Note:** JCiP (Goetz, 2006) is still the best treatment of 2.1–2.4 and is genuinely worth buying. It predates CompletableFuture, virtual threads, and structured concurrency, so 2.5–2.7 need other sources.
 
 ---
 
