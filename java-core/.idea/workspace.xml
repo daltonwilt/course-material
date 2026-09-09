@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0568bf88-a917-4539-94cf-aa2b2ff09c3b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/SiteApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/profile/Profile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/school/School.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/school/SchoolController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/school/SchoolDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/school/SchoolMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/school/SchoolRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/school/SchoolService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/student/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/student/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/student/StudentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/student/StudentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/student/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/student/StudentResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/java/com/monolith/site/student/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/test/java/com/monolith/site/SiteApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/test/java/com/monolith/site/student/StudentMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-basics/src/test/java/com/monolith/site/student/StudentServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-hibernate.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/src/main/java/com/monolith/jpa/JpaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/src/main/java/com/monolith/jpa/entity/Author.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-framework/spring-jpa/src/test/java/com/monolith/jpa/JpaApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;daltonwilt&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/daltonwilt/learn.git&quot;,
+    &quot;accountId&quot;: &quot;cf14d280-ca81-4a3e-871d-8f67e3b0fd7c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3J6GvHJP7kfJaJLOuAkJmjYIQxk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/daltonwilt/Documents/learn/java-core/src/main/java/com/monolith/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <setting name="addClasspath" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.27258.48" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.27258.48" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0568bf88-a917-4539-94cf-aa2b2ff09c3b" name="Changes" comment="" />
+      <created>1788974333690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788974333690</updated>
+      <workItem from="1788974334883" duration="121000" />
+      <workItem from="1788974478386" duration="210000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
