@@ -12,7 +12,7 @@ This repo holds the study notes, resources, and exercises for every node. The co
 
 | # | Node | Topics | Code | Status |
 |---|---|---|---|---|
-| 01 | [Java Core](java/01-java-core.md) | Collections · Streams | [java-course](https://github.com/daltonwilt/java-course) | ⬜ |
+| 01 | [Java Core](java/01-java-core.md) | Collections · Streams | [java-course](https://github.com/daltonwilt/java-course) | 🟨 |
 | 02 | [Java Concurrency](java/02-java-concurrency.md) | Locks · Futures | [java-course](https://github.com/daltonwilt/java-course) | ⬜ |
 | 03 | [JVM Internals](java/03-jvm-internals.md) | Memory · GC · Tuning | [java-course](https://github.com/daltonwilt/java-course) | ⬜ |
 | 04 | [Data Structures](dsa/04-data-structures.md) | Trees · Graphs · Heaps | [dsa-course](https://github.com/daltonwilt/dsa-course) | ⬜ |
@@ -28,7 +28,7 @@ This repo holds the study notes, resources, and exercises for every node. The co
 
 | # | Node | Topics | Code | Status |
 |---|---|---|---|---|
-| 10 | [Spring Boot](spring-boot/10-spring-boot.md) | DI · Config · Actuator | [spring-boot-course](https://github.com/daltonwilt/spring-boot-course) | ⬜ |
+| 10 | [Spring Boot](spring-boot/10-spring-boot.md) | DI · Config · Actuator | [spring-boot-course](https://github.com/daltonwilt/spring-boot-course) | 🟨 |
 | 11 | [REST API Design](spring-boot/11-rest-api-design.md) | Resources · Versioning | [spring-boot-course](https://github.com/daltonwilt/spring-boot-course) | ⬜ |
 | 12 | [gRPC Contracts](spring-boot/12-grpc-contracts.md) | Protobuf · Streaming | [spring-boot-course](https://github.com/daltonwilt/spring-boot-course) | ⬜ |
 | 13 | [Distributed Core](distributed-systems/13-distributed-core.md) | CAP · Consistency | [distributed-systems-course](https://github.com/daltonwilt/distributed-systems-course) | ⬜ |

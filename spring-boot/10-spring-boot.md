@@ -1,6 +1,6 @@
 # 10 · Spring Boot
 **Level 2** · **Topics:** DI · Config · Actuator  
-**Code:** [spring-boot-course/10-spring-boot](https://github.com/daltonwilt/spring-boot-course/tree/main/10-spring-boot)
+**Code:** [spring-boot-course](https://github.com/daltonwilt/spring-boot-course/tree/main)
 
 ## Overview
 What this node covers and why it matters.
@@ -9,7 +9,11 @@ What this node covers and why it matters.
 - [Resource name](link): one line on what it's good for
 
 ## Exercises
-- [ ] Exercise description
+- [x] [spring-basics](https://github.com/daltonwilt/spring-boot-course/tree/main/10-spring-basics): REST API with controllers, services, DTOs, mappers, and tests
+- [x] [spring-jpa](https://github.com/daltonwilt/spring-boot-course/tree/main/10-spring-jpa): Spring Data JPA entities, repositories, and ID generation strategies
+
+## Notes
+- [Spring Boot fundamentals, DI, REST, and DTOs](10-spring-boot-notes.md)
 
 ## Done when
 - What you can explain or build once this node is complete

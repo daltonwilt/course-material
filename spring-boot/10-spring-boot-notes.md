@@ -456,3 +456,6 @@ Provides a simple web UI to configure a project, and generates an endpoint you c
 - Package name
 - Packaging (Jar / War) — _Jar is recommended with Spring Boot_
 - Java version
+
+---
+[← 10 · Spring Boot](10-spring-boot.md) · [11 · REST API Design](11-rest-api-design.md)

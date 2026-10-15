@@ -87,3 +87,6 @@ The price of resizing an array varies depending on the number of elements you ne
 
 - **JMH** — how to measure performance
 - **JOL** — how to measure the memory an object is consuming
+
+---
+[← 01 · Java Core](01-java-core.md)

@@ -361,3 +361,6 @@ Questions to be able to answer afterwards:
 Measure with **JMH** (throughput) and **JOL** (object layout / retained size) — the same
 tools from the ArrayList/LinkedList notes. JOL makes the `Node` vs `TreeNode` size difference
 concrete.
+
+---
+[← 01 · Java Core](01-java-core.md)

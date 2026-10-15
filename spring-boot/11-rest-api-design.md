@@ -11,6 +11,9 @@ What this node covers and why it matters.
 ## Exercises
 - [ ] Exercise description
 
+## Notes
+- [Spring Boot fundamentals, DI, REST, and DTOs](10-spring-boot-notes.md)
+
 ## Done when
 - What you can explain or build once this node is complete
 
