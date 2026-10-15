@@ -120,8 +120,8 @@ Item 3 is the real gate. Reading about performance and measuring it are differen
 ---
 
 ## Notes
-- [List implementations: ArrayList vs. LinkedList](01-java-core-list-implementations.md)
-- [Map implementations: HashMap internals](01-java-core-map-implementations.md)
+- [List implementations: ArrayList vs. LinkedList](/java/01-java-core-notes/01-java-core-list-implementations.md)
+- [Map implementations: HashMap internals](/java/01-java-core-notes/01-java-core-map-implementations.md)
 
 ---
 [Roadmap](../README.md) · [02 · Java Concurrency](../java/02-java-concurrency.md) →
