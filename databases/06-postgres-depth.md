@@ -1,0 +1,18 @@
+# 06 · Postgres Depth
+**Level 1** · **Topics:** Indexes · Query Plans  
+**Code:** [databases-course/06-postgres-depth](https://github.com/daltonwilt/databases-course/tree/main/06-postgres-depth)
+
+## Overview
+What this node covers and why it matters.
+
+## Resources
+- [Resource name](link): one line on what it's good for
+
+## Exercises
+- [ ] Exercise description
+
+## Done when
+- What you can explain or build once this node is complete
+
+---
+← [05 · Algorithms](../dsa/05-algorithms.md) · [Roadmap](../README.md) · [07 · Postgres at Scale](../databases/07-postgres-at-scale.md) →
